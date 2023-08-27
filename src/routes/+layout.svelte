@@ -1,3 +1,16 @@
+<script lang="ts">
+	import { page } from '$app/stores';
+	import TopAppBar, {
+		Row,
+		Section,
+		Title,
+		AutoAdjust,
+	} from '@smui/top-app-bar';
+	import Button, { Label, Group } from '@smui/button';
+
+  	let topAppBar: TopAppBar;
+</script>
+
 <div id="translateLeft">
 	<TopAppBar bind:this={topAppBar} variant="standard" dense>
 		<Row>
@@ -21,19 +34,6 @@
 <AutoAdjust {topAppBar}>
 	<slot />
 </AutoAdjust>
-   
-<script lang="ts">
-	import { page } from '$app/stores';
-	import TopAppBar, {
-		Row,
-		Section,
-		Title,
-		AutoAdjust,
-	} from '@smui/top-app-bar';
-	import Button, { Label, Group } from '@smui/button';
-
-  	let topAppBar: TopAppBar;
-</script>
 
 <style>
 	#translateLeft {
